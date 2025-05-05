@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import { useState, Fragment } from "react";
 import Tab from "./Tab";
 import { useAdminInfo } from "@/contexts/AdminInfo";
+import LogoutButton from "./LogoutButton";
 
 type Props = {
   className?: string;
@@ -30,7 +31,7 @@ const Index = (props: Props) => {
       {/* Sidebar */}
       <div
         className={cn(
-          "sidebar w-fit lg:max-w-[250px] h-full flex flex-col bg-title border-y-[3rem] border-title transition-all z-[998]",
+          "sidebar w-fit lg:max-w-[250px] h-full flex flex-col bg-title border-t-[3rem] border-title transition-all z-[998]",
           props.className,
           "max-lg:fixed max-lg:top-0 max-lg:-left-[500vw]",
           isOpen && "max-lg:left-0"
@@ -51,7 +52,7 @@ const Index = (props: Props) => {
         </div>
 
         {/* Routes */}
-        <div className="routes mt-[3rem] h-2/4 grow overflow-y-auto [--scrollbarWidth:0]">
+        <div className="routes mt-[3rem] h-[10rem] grow overflow-y-auto [--scrollbarWidth:0]">
           <div className="wrapper h-fit text-white">
             {Object.entries(routes).map(([key, route]) => {
               // Return if auth
@@ -115,6 +116,9 @@ const Index = (props: Props) => {
             })}
           </div>
         </div>
+
+        {/* Logout */}
+        <LogoutButton />
       </div>
 
       {/* Hamburger Menu */}
