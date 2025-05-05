@@ -2,7 +2,7 @@ import { FNGetAllAdminPermissions } from "@/fetch-data/Types";
 import { AqiWebsiteSupportedLanguages } from "@/types/misc"
 
 // Domain name
-export const domainName = process.env.NEXT_PUBLIC_DOMAIN
+export const domainName = process.env.NODE_ENV === "production" ? "https://admin.pranaair.top" : "http://localhost:3000";
 
 // aqiWebsiteSupportedLanguages
 export const aqiWebsiteSupportedLanguages: AqiWebsiteSupportedLanguages[] = ["en", "ar", "cn", "au", "ca", "in", "uk", "us", "fr", "de", "hi", "id", "ja", "pt", "ko", "ru", "es", "th", "vi"]
