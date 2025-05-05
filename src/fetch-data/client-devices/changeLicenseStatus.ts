@@ -34,7 +34,7 @@ const changeLicenseStatus = async (args: Args): Promise<string | undefined> => {
         formData.append('status', String(args.options.status));
 
         // Make api call
-        const request = await fetch("https://airquality.aqi.in/api/v1/admin/AdminChangeLicenceStatus", {
+        const request = await fetch("https://airquality.pranaair.top/api/v1/admin/AdminChangeLicenceStatus", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

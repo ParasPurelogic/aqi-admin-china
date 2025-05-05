@@ -21,7 +21,7 @@ const getAllSensors = async (args: Args): Promise<FNGetAllSensors | undefined> =
         args?.onFetching?.();
 
         // Make API call
-        const request = await fetch("https://airquality.aqi.in/api/v1/admin/GetAllSensorList");
+        const request = await fetch("https://airquality.pranaair.top/api/v1/admin/GetAllSensorList");
 
         // Convert the data
         const response: Response = await request.json();

@@ -40,7 +40,7 @@ const getAllDevices = async (args: Args): Promise<UserDevice[] | undefined> => {
         // Calls
         const [response, sensors, plans] = await Promise.all([
             // Fetch Devices
-            fetch("https://airquality.aqi.in/api/v1/admin/GetAllClientDevices", {
+            fetch("https://airquality.pranaair.top/api/v1/admin/GetAllClientDevices", {
                 headers,
                 cache: "no-store"
             }).then(res => res.json() as Promise<API["response"]>),

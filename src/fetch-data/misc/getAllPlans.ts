@@ -22,7 +22,7 @@ const getSubscriptionPlans = async (args: Args): Promise<Plan[] | undefined> => 
         args?.onFetching?.();
 
         // Make API call
-        const request = await fetch("https://airquality.aqi.in/api/v1/PlanList", {
+        const request = await fetch("https://airquality.pranaair.top/api/v1/PlanList", {
             next: { revalidate: 604800 } // Revalidate after 7 days
         });
 

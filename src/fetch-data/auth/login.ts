@@ -39,7 +39,7 @@ const crossDomainLogin = async (args: Args): Promise<TypeAdminInfo | undefined> 
         firstServerPayload.append('password', args?.options.password || "");
 
         // Make API call to server1
-        const request1 = await fetch("https://airquality.aqi.in/api/v1/admin/login", {
+        const request1 = await fetch("https://airquality.pranaair.top/api/v1/admin/login", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'

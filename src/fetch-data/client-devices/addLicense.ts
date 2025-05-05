@@ -42,7 +42,7 @@ const addLicense = async (args: Args): Promise<string | undefined> => {
         formData.append('billing_json', JSON.stringify(args.options.billing_json || {}));
 
         // Make api call
-        const request = await fetch("https://airquality.aqi.in/api/v1/admin/AdminActivateDeviceLicence", {
+        const request = await fetch("https://airquality.pranaair.top/api/v1/admin/AdminActivateDeviceLicence", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
